@@ -12,6 +12,8 @@ const validateFormValues = ({
   const passwordRegex =
     /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,15}$/;
 
+  const mobileNumberRegex = /^[6-9]{1}[0-9]{9}$/;
+
   // *********** FIRST NAME VALIDATION ***********
 
   if (!firstName) {
@@ -38,10 +40,17 @@ const validateFormValues = ({
 
   // *********** PASSWORD VALIDATION ***********
 
-  if (!password || password.length < 9) {
-    errors.password = `Password must be at least 8 characters.`;
+  if (!password) {
+    errors.password = `Password is required`;
   } else if (!passwordRegex.test(password)) {
     errors.password = `Password must be 9 to 15 characters which contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character.`;
+  }
+
+  // ************** MOBILE NUMBER VALIDATION **************
+  if (!mobileNumber) {
+    errors.mobileNumber = `Mobile Number is required`;
+  } else if (!mobileNumberRegex.test(mobileNumber)) {
+    errors.mobileNumber = `Mobile Number must be in a valid format`;
   }
 
   return errors;

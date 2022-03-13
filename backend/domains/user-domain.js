@@ -22,7 +22,11 @@ class UserDomain {
   }
   //to get all users
   async getAllUsers(req, res) {
-    const user = await UserModel.find();
+    const { page = 1, limit = 10 } = req.query;
+    const user = await UserModel.find()
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .sort({ firstName: 1 });
     res.send(user);
   }
 

@@ -44,14 +44,14 @@ export default function UpdateUser() {
 
   return (
     <>
-      <h5 className='fs-3 text-center my-3'>Update User Details</h5>
-      <form onSubmit={handleSubmit} className='w-25 m-auto'>
+      <h5 className="fs-3 text-center my-3">Update User Details</h5>
+      <form onSubmit={handleSubmit} className="w-25 m-auto">
         <div>
-          <div className='mb-3'>
+          <div className="mb-3">
             <input
-              type='text'
-              placeholder='First Name'
-              className='form-control'
+              type="text"
+              placeholder="First Name"
+              className="form-control"
               required
               value={firstName}
               onChange={(e) => {
@@ -59,11 +59,11 @@ export default function UpdateUser() {
               }}
             />
           </div>
-          <div className='mb-3'>
+          <div className="mb-3">
             <input
-              type='text'
-              placeholder='Last Name'
-              className='form-control'
+              type="text"
+              placeholder="Last Name"
+              className="form-control"
               required
               value={lastName}
               onChange={(e) => {
@@ -71,11 +71,11 @@ export default function UpdateUser() {
               }}
             />
           </div>
-          <div className='mb-3'>
+          <div className="mb-3">
             <input
-              type='password'
-              placeholder='Password'
-              className='form-control'
+              type="password"
+              placeholder="Password"
+              className="form-control"
               required
               value={password}
               onChange={(e) => {
@@ -83,11 +83,11 @@ export default function UpdateUser() {
               }}
             />
           </div>
-          <div className='mb-3'>
+          <div className="mb-3">
             <input
-              type='text'
-              placeholder='Email address'
-              className='form-control'
+              type="text"
+              placeholder="Email address"
+              className="form-control"
               required
               value={emailAddress}
               onChange={(e) => {
@@ -95,11 +95,11 @@ export default function UpdateUser() {
               }}
             />
           </div>
-          <div className='mb-3'>
+          <div className="mb-3">
             <input
-              type='text'
-              placeholder='Mobile Number'
-              className='form-control'
+              type="text"
+              placeholder="Mobile Number"
+              className="form-control"
               required
               value={mobileNumber}
               onChange={(e) => {
@@ -107,7 +107,7 @@ export default function UpdateUser() {
               }}
             />
           </div>
-          <button type='submit' className='btn btn-dark'>
+          <button type="submit" className="btn btn-dark">
             Update User
           </button>
         </div>
